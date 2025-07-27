@@ -1,0 +1,121 @@
+gradeit.sh refout output output/LOG.txt
+diff -b -q refout/out_0_S output/out_0_S
+   DIR1-SUM ==> SUM: 213 212 0.9953 78.70 57.50 146
+   DIR2-SUM ==> SUM: 312 311 0.9968 103.50 72.40 135
+diff -b -q refout/out_0_L output/out_0_L
+   DIR1-SUM ==> SUM: 198 197 0.9949 67.30 47.60 170
+   DIR2-SUM ==> SUM: 312 311 0.9968 103.50 72.40 135
+diff -b -q refout/out_0_C output/out_0_C
+   DIR1-SUM ==> SUM: 253 252 0.9960 85.50 60.30 146
+   DIR2-SUM ==> SUM: 312 311 0.9968 103.50 72.40 135
+diff -b -q refout/out_0_F output/out_0_F
+   DIR1-SUM ==> SUM: 235 234 0.9957 92.30 68.90 168
+   DIR2-SUM ==> SUM: 312 311 0.9968 103.50 72.40 135
+diff -b -q refout/out_1_S output/out_1_S
+   DIR1-SUM ==> SUM: 3218 2902 0.9018 239.05 93.95 395
+   DIR2-SUM ==> SUM: 3310 3122 0.9432 323.30 167.20 650
+diff -b -q refout/out_1_L output/out_1_L
+   DIR1-SUM ==> SUM: 3218 2902 0.9018 239.05 93.95 395
+   DIR2-SUM ==> SUM: 3310 3122 0.9432 323.30 167.20 650
+diff -b -q refout/out_1_C output/out_1_C
+   DIR1-SUM ==> SUM: 3218 3020 0.9385 267.50 116.50 558
+   DIR2-SUM ==> SUM: 3310 3122 0.9432 323.30 167.20 650
+diff -b -q refout/out_1_F output/out_1_F
+   DIR1-SUM ==> SUM: 3208 2902 0.9046 248.55 103.45 385
+   DIR2-SUM ==> SUM: 3310 3122 0.9432 323.30 167.20 650
+diff -b -q refout/out_2_S output/out_2_S
+   DIR1-SUM ==> SUM: 1635 1574 0.9627 80.20 48.72 201
+   DIR2-SUM ==> SUM: 1990 1960 0.9849 223.86 184.66 465
+diff -b -q refout/out_2_L output/out_2_L
+   DIR1-SUM ==> SUM: 1539 1486 0.9656 63.44 33.72 151
+   DIR2-SUM ==> SUM: 1990 1960 0.9849 223.86 184.66 465
+diff -b -q refout/out_2_C output/out_2_C
+   DIR1-SUM ==> SUM: 1627 1597 0.9816 98.78 66.84 201
+   DIR2-SUM ==> SUM: 1990 1960 0.9849 223.86 184.66 465
+diff -b -q refout/out_2_F output/out_2_F
+   DIR1-SUM ==> SUM: 1618 1588 0.9815 99.82 68.06 204
+   DIR2-SUM ==> SUM: 1990 1960 0.9849 223.86 184.66 465
+diff -b -q refout/out_3_S output/out_3_S
+   DIR1-SUM ==> SUM: 13166 11870 0.9016 307.73 189.03 707
+   DIR2-SUM ==> SUM: 16432 16119 0.9810 2066.14 1904.95 3452
+diff -b -q refout/out_3_L output/out_3_L
+   DIR1-SUM ==> SUM: 13199 11896 0.9013 313.27 194.31 707
+   DIR2-SUM ==> SUM: 16432 16119 0.9810 2066.14 1904.95 3452
+diff -b -q refout/out_3_C output/out_3_C
+   DIR1-SUM ==> SUM: 13278 12510 0.9422 399.96 274.86 906
+   DIR2-SUM ==> SUM: 16432 16119 0.9810 2066.14 1904.95 3452
+diff -b -q refout/out_3_F output/out_3_F
+   DIR1-SUM ==> SUM: 13168 12217 0.9278 399.35 277.18 1151
+   DIR2-SUM ==> SUM: 16432 16119 0.9810 2066.14 1904.95 3452
+diff -b -q refout/out_4_S output/out_4_S
+   DIR1-SUM ==> SUM: 2672 2561 0.9585 161.78 110.56 519
+   DIR2-SUM ==> SUM: 4218 4165 0.9874 917.18 833.88 1683
+diff -b -q refout/out_4_L output/out_4_L
+   DIR1-SUM ==> SUM: 2730 2619 0.9593 195.06 142.68 357
+   DIR2-SUM ==> SUM: 4218 4165 0.9874 917.18 833.88 1683
+diff -b -q refout/out_4_C output/out_4_C
+   DIR1-SUM ==> SUM: 2706 2653 0.9804 183.66 130.60 459
+   DIR2-SUM ==> SUM: 4218 4165 0.9874 917.18 833.88 1683
+diff -b -q refout/out_4_F output/out_4_F
+   DIR1-SUM ==> SUM: 2667 2535 0.9505 170.48 119.78 433
+   DIR2-SUM ==> SUM: 4218 4165 0.9874 917.18 833.88 1683
+diff -b -q refout/out_5_S output/out_5_S
+   DIR1-SUM ==> SUM: 1643 1452 0.8837 119.45 46.85 192
+   DIR2-SUM ==> SUM: 1678 1560 0.9297 154.70 76.70 302
+diff -b -q refout/out_5_L output/out_5_L
+   DIR1-SUM ==> SUM: 1643 1452 0.8837 119.45 46.85 192
+   DIR2-SUM ==> SUM: 1678 1560 0.9297 154.70 76.70 302
+diff -b -q refout/out_5_C output/out_5_C
+   DIR1-SUM ==> SUM: 1643 1510 0.9191 151.60 76.10 394
+   DIR2-SUM ==> SUM: 1678 1560 0.9297 154.70 76.70 302
+diff -b -q refout/out_5_F output/out_5_F
+   DIR1-SUM ==> SUM: 1628 1452 0.8919 117.75 45.15 177
+   DIR2-SUM ==> SUM: 1678 1560 0.9297 154.70 76.70 302
+diff -b -q refout/out_6_S output/out_6_S
+   DIR1-SUM ==> SUM: 11481 10834 0.9436 316.98 208.64 879
+   DIR2-SUM ==> SUM: 16251 16119 0.9919 2878.35 2717.16 5083
+diff -b -q refout/out_6_L output/out_6_L
+   DIR1-SUM ==> SUM: 11410 10771 0.9440 342.20 234.49 764
+   DIR2-SUM ==> SUM: 16251 16119 0.9919 2878.35 2717.16 5083
+diff -b -q refout/out_6_C output/out_6_C
+   DIR1-SUM ==> SUM: 11402 10897 0.9557 379.69 270.72 949
+   DIR2-SUM ==> SUM: 16251 16119 0.9919 2878.35 2717.16 5083
+diff -b -q refout/out_6_F output/out_6_F
+   DIR1-SUM ==> SUM: 11834 11545 0.9756 456.79 341.34 1458
+   DIR2-SUM ==> SUM: 16251 16119 0.9919 2878.35 2717.16 5083
+diff -b -q refout/out_7_S output/out_7_S
+   DIR1-SUM ==> SUM: 2215 2202 0.9941 207.39 179.86 743
+   DIR2-SUM ==> SUM: 7718 7705 0.9983 3077.34 2981.03 5635
+diff -b -q refout/out_7_L output/out_7_L
+   DIR1-SUM ==> SUM: 2432 2419 0.9947 229.31 199.07 512
+   DIR2-SUM ==> SUM: 7718 7705 0.9983 3077.34 2981.03 5635
+diff -b -q refout/out_7_C output/out_7_C
+   DIR1-SUM ==> SUM: 2264 2251 0.9943 310.26 282.12 579
+   DIR2-SUM ==> SUM: 7718 7705 0.9983 3077.34 2981.03 5635
+diff -b -q refout/out_7_F output/out_7_F
+   DIR1-SUM ==> SUM: 2256 2243 0.9942 311.39 283.35 795
+   DIR2-SUM ==> SUM: 7718 7705 0.9983 3077.34 2981.03 5635
+diff -b -q refout/out_8_S output/out_8_S
+   DIR1-SUM ==> SUM: 7187 7148 0.9946 759.71 670.36 2019
+   DIR2-SUM ==> SUM: 25708 25669 0.9985 10075.19 9754.33 19023
+diff -b -q refout/out_8_L output/out_8_L
+   DIR1-SUM ==> SUM: 7377 7338 0.9947 785.59 693.86 1693
+   DIR2-SUM ==> SUM: 25708 25669 0.9985 10075.19 9754.33 19023
+diff -b -q refout/out_8_C output/out_8_C
+   DIR1-SUM ==> SUM: 8289 8250 0.9953 994.26 891.14 1826
+   DIR2-SUM ==> SUM: 25708 25669 0.9985 10075.19 9754.33 19023
+diff -b -q refout/out_8_F output/out_8_F
+   DIR1-SUM ==> SUM: 8932 8893 0.9956 1060.81 949.65 2594
+   DIR2-SUM ==> SUM: 25708 25669 0.9985 10075.19 9754.33 19023
+diff -b -q refout/out_9_S output/out_9_S
+   DIR1-SUM ==> SUM: 24213 24186 0.9989 412.15 363.78 1805
+   DIR2-SUM ==> SUM: 87694 87667 0.9997 31386.50 31211.16 63627
+diff -b -q refout/out_9_L output/out_9_L
+   DIR1-SUM ==> SUM: 24530 24503 0.9989 391.15 342.14 940
+   DIR2-SUM ==> SUM: 87694 87667 0.9997 31386.50 31211.16 63627
+diff -b -q refout/out_9_C output/out_9_C
+   DIR1-SUM ==> SUM: 24368 24341 0.9989 513.67 464.98 1282
+   DIR2-SUM ==> SUM: 87694 87667 0.9997 31386.50 31211.16 63627
+diff -b -q refout/out_9_F output/out_9_F
+   DIR1-SUM ==> SUM: 24622 24595 0.9989 567.94 518.75 1769
+   DIR2-SUM ==> SUM: 87694 87667 0.9997 31386.50 31211.16 63627

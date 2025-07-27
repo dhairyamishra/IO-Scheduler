@@ -1,0 +1,76 @@
+Bahubali
+make[1]: Entering directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+rm -f iosched            
+rm -rf output              *.o *.d
+make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+make[1]: Entering directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+g++ -std=c++17 -Wall -Wextra -O2 -g -o iosched iosched.cpp
+bash runit.sh output              ./iosched            
+outdir=<output> sched=<./iosched >
+./iosched -sN ./input0
+./iosched -sS ./input0
+./iosched -sL ./input0
+./iosched -sC ./input0
+./iosched -sF ./input0
+./iosched -sN ./input1
+./iosched -sS ./input1
+./iosched -sL ./input1
+./iosched -sC ./input1
+./iosched -sF ./input1
+./iosched -sN ./input2
+./iosched -sS ./input2
+./iosched -sL ./input2
+./iosched -sC ./input2
+./iosched -sF ./input2
+./iosched -sN ./input3
+./iosched -sS ./input3
+./iosched -sL ./input3
+./iosched -sC ./input3
+./iosched -sF ./input3
+./iosched -sN ./input4
+./iosched -sS ./input4
+./iosched -sL ./input4
+./iosched -sC ./input4
+./iosched -sF ./input4
+./iosched -sN ./input5
+./iosched -sS ./input5
+./iosched -sL ./input5
+./iosched -sC ./input5
+./iosched -sF ./input5
+./iosched -sN ./input6
+./iosched -sS ./input6
+./iosched -sL ./input6
+./iosched -sC ./input6
+./iosched -sF ./input6
+./iosched -sN ./input7
+./iosched -sS ./input7
+./iosched -sL ./input7
+./iosched -sC ./input7
+./iosched -sF ./input7
+./iosched -sN ./input8
+./iosched -sS ./input8
+./iosched -sL ./input8
+./iosched -sC ./input8
+./iosched -sF ./input8
+./iosched -sN ./input9
+./iosched -sS ./input9
+./iosched -sL ./input9
+./iosched -sC ./input9
+./iosched -sF ./input9
+bash gradeit.sh refout              output             
+b4d05c0ee4f6df177fca481b36b90df6  - /home/dpm/1000/Bahubali/0727/1807/13.3.0
+
+         N  S  L  C  F
+0        .  x  x  x  x
+1        .  x  x  x  x
+2        .  x  x  x  x
+3        .  x  x  x  x
+4        .  x  x  x  x
+5        .  x  x  x  x
+6        .  x  x  x  x
+7        .  x  x  x  x
+8        .  x  x  x  x
+9        .  x  x  x  x
+SUM     10  0  0  0  0
+TOTAL: 10 out of 50
+make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
