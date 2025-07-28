@@ -1,7 +1,7 @@
 Bahubali
 make[1]: Entering directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
 rm -f iosched            
-rm -rf output              *.o *.d
+rm -rf output              debug              *.o *.d
 make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
 make[1]: Entering directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
 g++ -std=c++17 -Wall -Wextra -O2 -g -o iosched iosched.cpp
@@ -10,74 +10,87 @@ outdir=<output> sched=<./iosched >
 ./iosched -sN ./input0
 ./iosched -sS ./input0
 ./iosched -sL ./input0
-runit.sh: line 91:  8696 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input0
-runit.sh: line 91:  8697 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6439 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input0
-runit.sh: line 91:  8698 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6440 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input1
 ./iosched -sS ./input1
 ./iosched -sL ./input1
-runit.sh: line 91:  8701 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input1
-runit.sh: line 91:  8702 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6444 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input1
-runit.sh: line 91:  8703 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6445 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input2
 ./iosched -sS ./input2
 ./iosched -sL ./input2
-runit.sh: line 91:  8706 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input2
-runit.sh: line 91:  8707 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6449 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input2
-runit.sh: line 91:  8708 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6450 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input3
 ./iosched -sS ./input3
 ./iosched -sL ./input3
-runit.sh: line 91:  8711 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input3
-runit.sh: line 91:  8712 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6454 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input3
-runit.sh: line 91:  8713 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6455 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input4
 ./iosched -sS ./input4
 ./iosched -sL ./input4
-runit.sh: line 91:  8716 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input4
-runit.sh: line 91:  8717 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6459 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input4
-runit.sh: line 91:  8718 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6460 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input5
 ./iosched -sS ./input5
 ./iosched -sL ./input5
-runit.sh: line 91:  8721 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input5
-runit.sh: line 91:  8722 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6464 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input5
-runit.sh: line 91:  8723 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6465 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input6
 ./iosched -sS ./input6
 ./iosched -sL ./input6
-runit.sh: line 91:  8726 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input6
-runit.sh: line 91:  8727 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6469 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input6
-runit.sh: line 91:  8728 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6470 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input7
 ./iosched -sS ./input7
 ./iosched -sL ./input7
-runit.sh: line 91:  8731 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input7
-runit.sh: line 91:  8732 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6474 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input7
-runit.sh: line 91:  8733 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6477 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input8
 ./iosched -sS ./input8
 ./iosched -sL ./input8
-runit.sh: line 91:  8736 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sC ./input8
-runit.sh: line 91:  8737 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6481 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input8
-runit.sh: line 91:  8738 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:  6482 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input9
 ./iosched -sS ./input9
+./iosched -sL ./input9
+./iosched -sC ./input9
+runit.sh: line 91:  6488 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+./iosched -sF ./input9
+runit.sh: line 91:  6491 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+bash gradeit.sh refout              output             
+7683895529947bd37e93beef55d9ece6  - /home/dpm/1000/Bahubali/0728/1339/13.3.0
+
+         N  S  L  C  F
+0        .  .  .  x  x
+1        .  .  .  x  x
+2        .  .  .  x  x
+3        .  .  .  x  x
+4        .  .  .  x  x
+5        .  .  .  x  x
+6        .  .  .  x  x
+7        .  .  x  x  x
+8        .  .  .  x  x
+9        .  x  x  x  x
+SUM     10  9  8  0  0
+TOTAL: 27 out of 50
+make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'

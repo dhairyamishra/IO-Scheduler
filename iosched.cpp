@@ -50,6 +50,40 @@ class IOSched {
             return r; //return to simulator
         }
 
+        // ---------- LOOK ----------
+        if (algo == LOOK_L) {
+            if (q.empty()) return nullptr;
+
+            auto best_it = q.end();
+            int min_seek = INT_MAX;
+
+            // pass 1: current direction
+            for (auto it = q.begin(); it != q.end(); ++it) {
+                int delta = (*it)->track - cur_track;
+                if ((direction == 1 && delta >= 0) || (direction == -1 && delta <= 0)) {
+                    int seek = abs(delta);
+                    if (seek < min_seek) { min_seek = seek; best_it = it; }
+                }
+            }
+
+            // if nothing, reverse and scan again
+            if (best_it == q.end()) {
+                direction = -direction;
+                for (auto it = q.begin(); it != q.end(); ++it) {
+                    int delta = (*it)->track - cur_track;
+                    if ((direction == 1 && delta >= 0) || (direction == -1 && delta <= 0)) {
+                        int seek = abs(delta);
+                        if (seek < min_seek) { min_seek = seek; best_it = it; }
+                    }
+                }
+            }
+
+            // return best
+            Request* r = *best_it;
+            q.erase(best_it);
+            return r;
+        }
+
         // if none Default
         return nullptr;
         
@@ -61,6 +95,7 @@ class IOSched {
   private:
     Sched algo;                  // selected algorithm
     std::deque<Request*> q;      // pending IOs
+    int direction = 1;           // current head direction: 1=up, -1=down
 };
 
 /* ---------------- simulation loop ------------------ */

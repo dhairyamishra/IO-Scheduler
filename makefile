@@ -5,6 +5,7 @@ BIN     = iosched            # final executable name
 SRCS    = iosched.cpp        # source files
 OUTDIR  = output             # where runit.sh will save results
 REFDIR  = refout             # reference outputs
+DEBUGDIR = debug             # where debug outputs will be saved
 
 .PHONY: all test grade logs runall clean debug
 
@@ -35,12 +36,12 @@ logs:
 
 # run selected scheduler / flags quickly ------------------------------
 # usage: make debug ARGS="-sS -v -q" (example)
-ARGS?=-sN -v -q -f   # default: FIFO with all debug flags
+ARGS?=-sL -v -q -f   # default: SSTF with all debug flags
 
 debug: $(BIN)
-	@mkdir -p $(OUTDIR)
-	@echo "Running: ./$(BIN) $(ARGS)"
-	bash runit.sh $(OUTDIR) ./$(BIN) $(ARGS)
+	@mkdir -p $(DEBUGDIR)
+	@echo "Running: ./$(BIN) $(ARGS) -> $(DEBUGDIR)/out_*"
+	bash runit.sh $(DEBUGDIR) ./$(BIN) $(ARGS)
 
 # convenience meta target ---------------------------------------------
 runall: all test grade logs
@@ -48,4 +49,4 @@ runall: all test grade logs
 # cleanup --------------------------------------------------------------
 clean:
 	rm -f $(BIN)
-	rm -rf $(OUTDIR) *.o *.d
+	rm -rf $(OUTDIR) $(DEBUGDIR) *.o *.d
