@@ -1,15 +1,15 @@
-b4d05c0ee4f6df177fca481b36b90df6  - /home/dpm/1000/Bahubali/0727/1807/13.3.0
+5efabf89d600bbdd01e52cf884f80811  - /home/dpm/1000/Bahubali/0728/0118/13.3.0
 
          N  S  L  C  F
-0        .  x  x  x  x
-1        .  x  x  x  x
-2        .  x  x  x  x
-3        .  x  x  x  x
-4        .  x  x  x  x
-5        .  x  x  x  x
-6        .  x  x  x  x
-7        .  x  x  x  x
-8        .  x  x  x  x
-9        .  x  x  x  x
-SUM     10  0  0  0  0
-TOTAL: 10 out of 50
+0        .  .  x  x  x
+1        .  .  x  x  x
+2        .  .  x  x  x
+3        .  .  x  x  x
+4        .  .  x  x  x
+5        .  .  x  x  x
+6        .  .  x  x  x
+7        .  .  x  x  x
+8        .  .  x  x  x
+9        x  x  x  x  x
+SUM      9  9  0  0  0
+TOTAL: 18 out of 50

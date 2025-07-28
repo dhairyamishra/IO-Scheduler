@@ -13,7 +13,7 @@ struct Request {
 // ---------------- scheduler enum ----------------
 enum Sched { FIFO_N, SSTF_S, LOOK_L, CLOOK_C, FLOOK_F };
 
-// ------------ minimal IOSched (FIFO only) ---------
+// Scheduler class
 class IOSched {
   public:
     IOSched(Sched s) : algo(s) {}
@@ -21,19 +21,49 @@ class IOSched {
     void add(Request* r) { q.push_back(r); }
     bool empty() const   { return q.empty(); }
 
-    // get next request according to selected algo 
-    Request* next() {
-        // FIFO for now
-        Request* r = q.front();
-        q.pop_front();
-        return r;
+    // get next request according to selected algo
+    //SSTF looks at track so add to the function handler
+    Request* next(int cur_track) {
+        // ---------- FIFO ----------
+        if (algo == FIFO_N) {
+            Request* r = q.front();
+            q.pop_front();
+            return r;
+        }
+
+        // ---------- SSTF ---------- 
+        if (algo == SSTF_S) {
+            auto best_it = q.begin();
+            int best_dist = abs((*best_it)->track - cur_track);// its distance from the head
+            // scan pending request
+            for (auto it = q.begin(); it != q.end(); ++it) {
+                int d = abs((*it)->track - cur_track); // distance of current request
+                // update head if better distance found
+                if (d < best_dist) {
+                    best_dist = d;
+                    best_it = it;
+                }
+            }
+            // minimum seek distance
+            Request* r = *best_it;//get pointer
+            q.erase(best_it);// remove it from the queue
+            return r; //return to simulator
+        }
+
+        // if none Default
+        return nullptr;
+        
     }
+
+    // expose read-only queue for debug printing
+    const std::deque<Request*>& queue() const { return q; }
+
   private:
     Sched algo;                  // selected algorithm
     std::deque<Request*> q;      // pending IOs
 };
 
-/* ---------- main simulation loop (implements FIFO now) ------------- */
+/* ---------------- simulation loop ------------------ */
 int main(int argc, char* argv[]) {
     // ---------------- flags ----------------
     bool v_flag = false;   // -v : verbose trace
@@ -94,6 +124,24 @@ int main(int argc, char* argv[]) {
     int cur_track = 0;
     IOSched scheduler(algo);
 
+    // helper 
+    auto dump_queue = [&](const deque<Request*>& dq, int dir, int cur_track){
+        // internal check for q flag
+        if (!q_flag) return;
+        cout << "    Q DIR=" << dir << " ";
+        for (auto* r : dq) {
+            if (dir == 0) {
+                // add phase: just id:track
+                cout << "[" << r->id << ":" << r->track << "] ";
+            } else {
+                int dist = r->track - cur_track;
+                if (dir == -1) dist = -dist;   // distance negative if opposite dir
+                cout << "[" << r->id << ":" << r->track << ":" << dist << "] ";
+            }
+        }
+        cout << "\n";
+    };
+
     /* ---------------- simulation loop ------------------ */
     int time = 0;
     Request* active = nullptr;
@@ -101,17 +149,35 @@ int main(int argc, char* argv[]) {
         /* A. enqueue arrivals */
         if (next_idx < total_ios && reqs[next_idx].arr == time) {
             scheduler.add(&reqs[next_idx]);
+            if (v_flag)
+            {
+                cout << time << ":\n" << reqs[next_idx].id << " add " << reqs[next_idx].track << "\n";
+            }
+            dump_queue(scheduler.queue(), 0, cur_track);
             ++next_idx;                        // one arrival per tick
         }
 
         /* B. finish active */
         if (active && active->end == time) {
+            if (v_flag)
+            {
+                cout << time << ":\n" << active->id << " finish " << (time - active->arr) << "\n";
+            }
             active = nullptr;
         }
 
         /* C. if no active, fetch next */
         if (!active && !scheduler.empty()) {
-            active = scheduler.next();
+            active = scheduler.next(cur_track);
+            if (v_flag)
+            {
+                cout << time << ":\n" << active->id << " issue " << active->track << " " << cur_track << "\n";
+            }
+            // determine movement direction: 1=up, -1=down, 0=same track
+            int dir = 0;
+            if(active->track > cur_track) {dir = 1;}
+            else if (active->track < cur_track) {dir = -1;}
+            dump_queue(scheduler.queue(), dir, cur_track);
             active->start = time;
             int dist = abs(active->track - cur_track);
             active->end  = time + dist;        // finish after exact moves
@@ -122,12 +188,12 @@ int main(int argc, char* argv[]) {
         /* D. advance head if active */
         if (active) {
             if (active->track > cur_track)      
-                {cur_track += 1;}
+            {cur_track += 1;}
             else if (active->track < cur_track) 
-                {cur_track -= 1;}
+            {cur_track -= 1;}
         }
 
-        /* E. exit? */
+        /* E. exit */
         if (!active && scheduler.empty() && next_idx == total_ios) {break;}
         ++time;
     }
