@@ -23,12 +23,15 @@ class IOSched {
 
     // get next request according to selected algo
     //SSTF looks at track so add to the function handler
-    Request* next(int cur_track) {
+    Request* next(int cur_track, int now) {
         // ---------- FIFO ----------
         if (algo == FIFO_N) {
-            Request* r = q.front();
-            q.pop_front();
-            return r;
+            if (q.front()->arr <= now) {
+                Request* r = q.front();
+                q.pop_front();
+                return r;
+            }
+            return nullptr; // first request not yet arrived
         }
 
         // ---------- SSTF ---------- 
@@ -37,6 +40,7 @@ class IOSched {
             int best_dist = abs((*best_it)->track - cur_track);// its distance from the head
             // scan pending request
             for (auto it = q.begin(); it != q.end(); ++it) {
+                if ((*it)->arr > now) continue; // skip future arrivals
                 int d = abs((*it)->track - cur_track); // distance of current request
                 // update head if better distance found
                 if (d < best_dist) {
@@ -45,9 +49,12 @@ class IOSched {
                 }
             }
             // minimum seek distance
-            Request* r = *best_it;//get pointer
-            q.erase(best_it);// remove it from the queue
-            return r; //return to simulator
+            if (best_it != q.end()) {
+                Request* r = *best_it;//get pointer
+                q.erase(best_it);// remove it from the queue
+                return r; //return to simulator
+            }
+            return nullptr; // none arrived yet
         }
 
         // ---------- LOOK ----------
@@ -59,6 +66,7 @@ class IOSched {
 
             // pass 1: current direction
             for (auto it = q.begin(); it != q.end(); ++it) {
+                if ((*it)->arr > now) continue; // skip future
                 int delta = (*it)->track - cur_track;
                 if ((direction == 1 && delta >= 0) || (direction == -1 && delta <= 0)) {
                     int seek = abs(delta);
@@ -70,6 +78,7 @@ class IOSched {
             if (best_it == q.end()) {
                 direction = -direction;
                 for (auto it = q.begin(); it != q.end(); ++it) {
+                    if ((*it)->arr > now) continue;
                     int delta = (*it)->track - cur_track;
                     if ((direction == 1 && delta >= 0) || (direction == -1 && delta <= 0)) {
                         int seek = abs(delta);
@@ -79,9 +88,12 @@ class IOSched {
             }
 
             // return best
-            Request* r = *best_it;
-            q.erase(best_it);
-            return r;
+            if (best_it != q.end()) {
+                Request* r = *best_it;
+                q.erase(best_it);
+                return r;
+            }
+            return nullptr; // none arrived yet in either direction
         }
 
         // if none Default
@@ -203,7 +215,7 @@ int main(int argc, char* argv[]) {
 
         /* C. if no active, fetch next */
         if (!active && !scheduler.empty()) {
-            active = scheduler.next(cur_track);
+            active = scheduler.next(cur_track, time);
             if (v_flag)
             {
                 cout << time << ":\n" << active->id << " issue " << active->track << " " << cur_track << "\n";

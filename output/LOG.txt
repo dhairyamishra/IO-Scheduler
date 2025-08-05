@@ -41,9 +41,6 @@ diff -b -q refout/out_6_C output/out_6_C
 diff -b -q refout/out_6_F output/out_6_F
    DIR1-SUM ==> SUM: 11834 11545 0.9756 456.79 341.34 1458
    DIR2-SUM ==> 
-diff -b -q refout/out_7_L output/out_7_L
-   DIR1-SUM ==> SUM: 2432 2419 0.9947 229.31 199.07 512
-   DIR2-SUM ==> SUM: 1166 1153 0.9889 -129.51 -143.93 459
 diff -b -q refout/out_7_C output/out_7_C
    DIR1-SUM ==> SUM: 2264 2251 0.9943 310.26 282.12 579
    DIR2-SUM ==> 
@@ -56,12 +53,6 @@ diff -b -q refout/out_8_C output/out_8_C
 diff -b -q refout/out_8_F output/out_8_F
    DIR1-SUM ==> SUM: 8932 8893 0.9956 1060.81 949.65 2594
    DIR2-SUM ==> 
-diff -b -q refout/out_9_S output/out_9_S
-   DIR1-SUM ==> SUM: 24213 24186 0.9989 412.15 363.78 1805
-   DIR2-SUM ==> SUM: 8242 8215 0.9967 -5170.37 -5186.80 1553
-diff -b -q refout/out_9_L output/out_9_L
-   DIR1-SUM ==> SUM: 24530 24503 0.9989 391.15 342.14 940
-   DIR2-SUM ==> SUM: 8210 8183 0.9967 -5186.22 -5202.58 883
 diff -b -q refout/out_9_C output/out_9_C
    DIR1-SUM ==> SUM: 24368 24341 0.9989 513.67 464.98 1282
    DIR2-SUM ==> 

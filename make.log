@@ -11,74 +11,74 @@ outdir=<output> sched=<./iosched >
 ./iosched -sS ./input0
 ./iosched -sL ./input0
 ./iosched -sC ./input0
-runit.sh: line 91:  6439 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   805 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input0
-runit.sh: line 91:  6440 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   806 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input1
 ./iosched -sS ./input1
 ./iosched -sL ./input1
 ./iosched -sC ./input1
-runit.sh: line 91:  6444 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   810 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input1
-runit.sh: line 91:  6445 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   811 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input2
 ./iosched -sS ./input2
 ./iosched -sL ./input2
 ./iosched -sC ./input2
-runit.sh: line 91:  6449 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   815 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input2
-runit.sh: line 91:  6450 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   816 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input3
 ./iosched -sS ./input3
 ./iosched -sL ./input3
 ./iosched -sC ./input3
-runit.sh: line 91:  6454 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   820 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input3
-runit.sh: line 91:  6455 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   821 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input4
 ./iosched -sS ./input4
 ./iosched -sL ./input4
 ./iosched -sC ./input4
-runit.sh: line 91:  6459 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   825 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input4
-runit.sh: line 91:  6460 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   826 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input5
 ./iosched -sS ./input5
 ./iosched -sL ./input5
 ./iosched -sC ./input5
-runit.sh: line 91:  6464 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   830 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input5
-runit.sh: line 91:  6465 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   831 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input6
 ./iosched -sS ./input6
 ./iosched -sL ./input6
 ./iosched -sC ./input6
-runit.sh: line 91:  6469 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   835 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input6
-runit.sh: line 91:  6470 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   836 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input7
 ./iosched -sS ./input7
 ./iosched -sL ./input7
 ./iosched -sC ./input7
-runit.sh: line 91:  6474 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   840 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input7
-runit.sh: line 91:  6477 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   843 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input8
 ./iosched -sS ./input8
 ./iosched -sL ./input8
 ./iosched -sC ./input8
-runit.sh: line 91:  6481 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   847 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input8
-runit.sh: line 91:  6482 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   848 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sN ./input9
 ./iosched -sS ./input9
 ./iosched -sL ./input9
 ./iosched -sC ./input9
-runit.sh: line 91:  6488 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   852 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 ./iosched -sF ./input9
-runit.sh: line 91:  6491 Segmentation fault      (core dumped) $@ > ${OUTFILE}
+runit.sh: line 91:   855 Segmentation fault      (core dumped) $@ > ${OUTFILE}
 bash gradeit.sh refout              output             
-7683895529947bd37e93beef55d9ece6  - /home/dpm/1000/Bahubali/0728/1339/13.3.0
+adbafa841e34df577268484b673f00c7  - /home/dpm/1000/Bahubali/0804/2052/13.3.0
 
          N  S  L  C  F
 0        .  .  .  x  x
@@ -88,9 +88,9 @@ bash gradeit.sh refout              output
 4        .  .  .  x  x
 5        .  .  .  x  x
 6        .  .  .  x  x
-7        .  .  x  x  x
+7        .  .  .  x  x
 8        .  .  .  x  x
-9        .  x  x  x  x
-SUM     10  9  8  0  0
-TOTAL: 27 out of 50
+9        .  .  .  x  x
+SUM     10 10 10  0  0
+TOTAL: 30 out of 50
 make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'

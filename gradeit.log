@@ -1,4 +1,4 @@
-7683895529947bd37e93beef55d9ece6  - /home/dpm/1000/Bahubali/0728/1339/13.3.0
+adbafa841e34df577268484b673f00c7  - /home/dpm/1000/Bahubali/0804/2052/13.3.0
 
          N  S  L  C  F
 0        .  .  .  x  x
@@ -8,8 +8,8 @@
 4        .  .  .  x  x
 5        .  .  .  x  x
 6        .  .  .  x  x
-7        .  .  x  x  x
+7        .  .  .  x  x
 8        .  .  .  x  x
-9        .  x  x  x  x
-SUM     10  9  8  0  0
-TOTAL: 27 out of 50
+9        .  .  .  x  x
+SUM     10 10 10  0  0
+TOTAL: 30 out of 50
