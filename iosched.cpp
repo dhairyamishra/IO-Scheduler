@@ -96,9 +96,38 @@ class IOSched {
             return nullptr; // none arrived yet in either direction
         }
 
+        // ---------- CLOOK ----------
+        if (algo == CLOOK_C) {
+            if (q.empty()) return nullptr;
+            auto best_it = q.end();
+            int best_track = INT_MAX;
+            // first pass: tracks >= cur_track (forward sweep)
+            for (auto it = q.begin(); it != q.end(); ++it) {
+                if ((*it)->arr > now) continue; // not arrived
+                if ((*it)->track >= cur_track && (*it)->track < best_track) {
+                    best_track = (*it)->track;
+                    best_it = it;
+                }
+            }
+            // if none found, wrap: pick smallest track overall
+            if (best_it == q.end()) {
+                for (auto it = q.begin(); it != q.end(); ++it) {
+                    if ((*it)->arr > now) continue;
+                    if ((*it)->track < best_track) {
+                        best_track = (*it)->track;
+                        best_it = it;
+                    }
+                }
+            }
+            if (best_it != q.end()) {
+                Request* r = *best_it;
+                q.erase(best_it);
+                return r;
+            }
+            return nullptr; // none ready yet
+        }
         // if none Default
         return nullptr;
-        
     }
 
     // expose read-only queue for debug printing
