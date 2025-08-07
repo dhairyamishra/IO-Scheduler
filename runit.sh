@@ -21,6 +21,7 @@ INPRE="input"
 OUTPRE="out"
 
 SCHEDS="N S L C F"
+# SCHEDS="F"
 
 ########################## TIMER MONITOR ####################
 

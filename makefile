@@ -36,7 +36,7 @@ logs:
 
 # run selected scheduler / flags quickly ------------------------------
 # usage: make debug ARGS="-sS -v -q" (example)
-ARGS?=-sL -v -q -f   # default: SSTF with all debug flags
+ARGS?=-v -q -f   # default: SSTF with all debug flags
 
 debug: $(BIN)
 	@mkdir -p $(DEBUGDIR)
