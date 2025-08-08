@@ -1,9 +1,9 @@
-Bahubali
-make[1]: Entering directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+crunchy1.cims.nyu.edu
+make[1]: Entering directory '/home/dpm8739/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
 rm -f iosched            
 rm -rf output              debug              *.o *.d
-make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
-make[1]: Entering directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+make[1]: Leaving directory '/home/dpm8739/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+make[1]: Entering directory '/home/dpm8739/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
 g++ -std=c++17 -Wall -Wextra -O2 -g -o iosched iosched.cpp
 bash runit.sh output              ./iosched            
 outdir=<output> sched=<./iosched >
@@ -58,7 +58,7 @@ outdir=<output> sched=<./iosched >
 ./iosched -sC ./input9
 ./iosched -sF ./input9
 bash gradeit.sh refout              output             
-75aba1cbd30c9d7c7aaa07bdc47840c9  - /home/dpm/1000/Bahubali/0807/1658/13.3.0
+9786bdbcb1f9671d2a4579e453ee7463  - /home/dpm8739/4485524/crunchy1/0807/1957/11.5.0
 
          N  S  L  C  F
 0        .  .  .  .  .
@@ -73,4 +73,4 @@ bash gradeit.sh refout              output
 9        .  .  .  .  .
 SUM     10 10 10 10 10
 TOTAL: 50 out of 50
-make[1]: Leaving directory '/mnt/c/Users/dhair/Desktop/Operating Systems/lab4_assign/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
+make[1]: Leaving directory '/home/dpm8739/CSCI-GA.2250-001-Operating-Systems-Summer-2025-lab-4'
