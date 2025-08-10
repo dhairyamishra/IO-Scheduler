@@ -58,7 +58,7 @@ outdir=<output> sched=<./iosched >
 ./iosched -sC ./input9
 ./iosched -sF ./input9
 bash gradeit.sh refout              output             
-9786bdbcb1f9671d2a4579e453ee7463  - /home/dpm8739/4485524/crunchy1/0807/1957/11.5.0
+48a5326f0af4bafd39830cf06c9ec1cf  - /home/dpm8739/4485524/crunchy1/0810/1332/11.5.0
 
          N  S  L  C  F
 0        .  .  .  .  .
